@@ -185,16 +185,21 @@ Each run records run ID, source file, content hash, start/end timestamps, status
 ## Tests
 
 The test suite currently has 14 tests and covers:
+
 - Happy path and baseline establishment.
-- Empty input.
-- Missing required schema/header.
-- Unexpected source column.
-- Null-rate anomaly.
-- Duplicate application ID.
-- Invalid customer reference.
-- Late-arriving records.
-- Same-input rerun/idempotency.
-- Negative loan amount.
+- Null-rate profiling and anomaly alerts.
+- Duplicate application IDs and invalid customer references.
+- Empty input batches.
+- Malformed input schemas.
+- Unexpected schema changes.
+- Late-arriving data and freshness alerts.
+- Idempotent reruns of identical input files.
+- Negative loan amounts.
+- Categorical distribution changes.
+- Failed-run recovery and retry.
+- Missing required record fields.
+- Stage-level operational observability.
+- Reproducible edge-case generation with expected labels stored separately from source data.
 
 ## Performance measurement and one optimization
 
