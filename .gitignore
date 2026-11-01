@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.env
+.env.*
+!.env.example
+data/quality_monitor.db
+*.log
+benchmark/benchmark.db
+benchmark/input/*.csv
+benchmark/reports/*.json
+!benchmark/benchmark_result.json

@@ -1,0 +1,9 @@
+{
+  "volume_change_threshold": 0.30,
+  "null_rate_increase_threshold": 0.10,
+  "distribution_change_threshold": 0.25,
+  "max_freshness_lag_minutes": 120,
+  "allowed_statuses": ["approved", "rejected", "pending"],
+  "age_min": 18,
+  "age_max": 100
+}

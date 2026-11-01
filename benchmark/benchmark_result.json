@@ -1,0 +1,11 @@
+{
+  "rows_requested": 100000,
+  "generation_seconds": 1.4058,
+  "processing_seconds": 3.3322,
+  "rows_per_second": 30009.82,
+  "pipeline_status": "SUCCESS",
+  "input_count": 100000,
+  "valid_count": 100000,
+  "rejected_count": 0,
+  "run_id": "RUN_D883B7712F37"
+}

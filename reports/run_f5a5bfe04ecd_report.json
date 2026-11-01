@@ -1,0 +1,63 @@
+{
+  "run_id": "RUN_F5A5BFE04ECD",
+  "source_file": "batch_001.csv",
+  "status": "SUCCESS",
+  "input_count": 1000,
+  "valid_count": 1000,
+  "rejected_count": 0,
+  "output_count": 1000,
+  "alerts": [],
+  "unexpected_columns": [],
+  "baseline_established": true,
+  "freshness_checked_at": "2026-10-31T14:45:04.065188+00:00",
+  "duration_seconds": 0.0628,
+  "rows_per_second": 15923.57,
+  "stage_results": [
+    {
+      "stage": "01_INGESTION",
+      "status": "PASS",
+      "detail": "Read 1000 data rows from batch_001.csv"
+    },
+    {
+      "stage": "02_REFERENCE_LOAD",
+      "status": "PASS",
+      "detail": "Loaded 501 customer reference IDs"
+    },
+    {
+      "stage": "03_SCHEMA_VALIDATION",
+      "status": "PASS",
+      "detail": "Required columns present; unexpected columns=none"
+    },
+    {
+      "stage": "04_RECORD_VALIDATION",
+      "status": "PASS",
+      "detail": "checked=1000, accepted=1000, rejected=0, reject_reasons={}"
+    },
+    {
+      "stage": "05_TARGET_PUBLISH",
+      "status": "PASS",
+      "detail": "Inserted 1000 accepted rows; quarantined 0 rows"
+    },
+    {
+      "stage": "06_DATA_PROFILING",
+      "status": "PASS",
+      "detail": "Created profiles for 3 columns"
+    },
+    {
+      "stage": "07_BASELINE_AND_MONITORING",
+      "status": "PASS",
+      "detail": "Baseline established; generated 0 alerts"
+    },
+    {
+      "stage": "08_RECONCILIATION",
+      "status": "PASS",
+      "detail": "input=1000 = accepted=1000 + rejected=0; target_output=1000"
+    },
+    {
+      "stage": "09_REPORTING",
+      "status": "PASS",
+      "detail": "Run status=SUCCESS; elapsed=0.0628s"
+    }
+  ],
+  "validation_reject_reason_counts": {}
+}

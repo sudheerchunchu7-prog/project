@@ -1,0 +1,68 @@
+{
+  "run_id": "RUN_B966C8EE86D3",
+  "source_file": "edge_cases.csv",
+  "status": "SUCCESS_WITH_REJECTS",
+  "input_count": 1000,
+  "valid_count": 996,
+  "rejected_count": 4,
+  "output_count": 996,
+  "alerts": [],
+  "unexpected_columns": [],
+  "baseline_established": false,
+  "freshness_checked_at": "2026-10-31T14:58:19.513622+00:00",
+  "duration_seconds": 0.0388,
+  "rows_per_second": 25773.2,
+  "stage_results": [
+    {
+      "stage": "01_INGESTION",
+      "status": "PASS",
+      "detail": "Read 1000 data rows from edge_cases.csv"
+    },
+    {
+      "stage": "02_REFERENCE_LOAD",
+      "status": "PASS",
+      "detail": "Loaded 501 customer reference IDs"
+    },
+    {
+      "stage": "03_SCHEMA_VALIDATION",
+      "status": "PASS",
+      "detail": "Required columns present; unexpected columns=none"
+    },
+    {
+      "stage": "04_RECORD_VALIDATION",
+      "status": "WARNING",
+      "detail": "checked=1000, accepted=996, rejected=4, reject_reasons={'age outside permitted range [18, 100]': 1, 'loan_amount must be a positive finite number': 1, 'unknown customer_id: C_UNKNOWN': 1, 'duplicate application_id within batch': 1}"
+    },
+    {
+      "stage": "05_TARGET_PUBLISH",
+      "status": "WARNING",
+      "detail": "Inserted 996 accepted rows; quarantined 4 rows"
+    },
+    {
+      "stage": "06_DATA_PROFILING",
+      "status": "PASS",
+      "detail": "Created profiles for 3 columns"
+    },
+    {
+      "stage": "07_BASELINE_AND_MONITORING",
+      "status": "PASS",
+      "detail": "Baseline compared; generated 0 alerts"
+    },
+    {
+      "stage": "08_RECONCILIATION",
+      "status": "PASS",
+      "detail": "input=1000 = accepted=996 + rejected=4; target_output=996"
+    },
+    {
+      "stage": "09_REPORTING",
+      "status": "PASS",
+      "detail": "Run status=SUCCESS_WITH_REJECTS; elapsed=0.0388s"
+    }
+  ],
+  "validation_reject_reason_counts": {
+    "age outside permitted range [18, 100]": 1,
+    "loan_amount must be a positive finite number": 1,
+    "unknown customer_id: C_UNKNOWN": 1,
+    "duplicate application_id within batch": 1
+  }
+}

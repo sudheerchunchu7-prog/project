@@ -1,0 +1,72 @@
+{
+  "run_id": "RUN_A303238C97EC",
+  "source_file": "batch_003_late.csv",
+  "status": "SUCCESS",
+  "input_count": 1000,
+  "valid_count": 1000,
+  "rejected_count": 0,
+  "output_count": 1000,
+  "alerts": [
+    {
+      "alert_type": "freshness",
+      "column_name": "event_timestamp",
+      "severity": "warning",
+      "baseline_value": "<= 120 minutes",
+      "current_value": "374.5 minutes",
+      "explanation": "Newest valid event is 374.5 minutes old; configured maximum lag is 120 minutes."
+    }
+  ],
+  "unexpected_columns": [],
+  "baseline_established": false,
+  "freshness_checked_at": "2026-10-31T14:56:27.347351+00:00",
+  "duration_seconds": 0.0409,
+  "rows_per_second": 24449.88,
+  "stage_results": [
+    {
+      "stage": "01_INGESTION",
+      "status": "PASS",
+      "detail": "Read 1000 data rows from batch_003_late.csv"
+    },
+    {
+      "stage": "02_REFERENCE_LOAD",
+      "status": "PASS",
+      "detail": "Loaded 501 customer reference IDs"
+    },
+    {
+      "stage": "03_SCHEMA_VALIDATION",
+      "status": "PASS",
+      "detail": "Required columns present; unexpected columns=none"
+    },
+    {
+      "stage": "04_RECORD_VALIDATION",
+      "status": "PASS",
+      "detail": "checked=1000, accepted=1000, rejected=0, reject_reasons={}"
+    },
+    {
+      "stage": "05_TARGET_PUBLISH",
+      "status": "PASS",
+      "detail": "Inserted 1000 accepted rows; quarantined 0 rows"
+    },
+    {
+      "stage": "06_DATA_PROFILING",
+      "status": "PASS",
+      "detail": "Created profiles for 3 columns"
+    },
+    {
+      "stage": "07_BASELINE_AND_MONITORING",
+      "status": "WARNING",
+      "detail": "Baseline compared; generated 1 alerts"
+    },
+    {
+      "stage": "08_RECONCILIATION",
+      "status": "PASS",
+      "detail": "input=1000 = accepted=1000 + rejected=0; target_output=1000"
+    },
+    {
+      "stage": "09_REPORTING",
+      "status": "PASS",
+      "detail": "Run status=SUCCESS; elapsed=0.0409s"
+    }
+  ],
+  "validation_reject_reason_counts": {}
+}

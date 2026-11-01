@@ -1,0 +1,68 @@
+{
+  "run_id": "RUN_DB6602DB5CE5",
+  "source_file": "edge.csv",
+  "status": "SUCCESS_WITH_REJECTS",
+  "input_count": 20,
+  "valid_count": 16,
+  "rejected_count": 4,
+  "output_count": 16,
+  "alerts": [],
+  "unexpected_columns": [],
+  "baseline_established": true,
+  "freshness_checked_at": "2026-10-30T13:30:15.023754+00:00",
+  "duration_seconds": 0.0072,
+  "rows_per_second": 2777.78,
+  "stage_results": [
+    {
+      "stage": "01_INGESTION",
+      "status": "PASS",
+      "detail": "Read 20 data rows from edge.csv"
+    },
+    {
+      "stage": "02_REFERENCE_LOAD",
+      "status": "PASS",
+      "detail": "Loaded 100 customer reference IDs"
+    },
+    {
+      "stage": "03_SCHEMA_VALIDATION",
+      "status": "PASS",
+      "detail": "Required columns present; unexpected columns=none"
+    },
+    {
+      "stage": "04_RECORD_VALIDATION",
+      "status": "WARNING",
+      "detail": "checked=20, accepted=16, rejected=4, reject_reasons={'age outside permitted range [18, 100]': 1, 'loan_amount must be a positive finite number': 1, 'unknown customer_id: C_UNKNOWN': 1, 'duplicate application_id within batch': 1}"
+    },
+    {
+      "stage": "05_TARGET_PUBLISH",
+      "status": "WARNING",
+      "detail": "Inserted 16 accepted rows; quarantined 4 rows"
+    },
+    {
+      "stage": "06_DATA_PROFILING",
+      "status": "PASS",
+      "detail": "Created profiles for 3 columns"
+    },
+    {
+      "stage": "07_BASELINE_AND_MONITORING",
+      "status": "PASS",
+      "detail": "Baseline established; generated 0 alerts"
+    },
+    {
+      "stage": "08_RECONCILIATION",
+      "status": "PASS",
+      "detail": "input=20 = accepted=16 + rejected=4; target_output=16"
+    },
+    {
+      "stage": "09_REPORTING",
+      "status": "PASS",
+      "detail": "Run status=SUCCESS_WITH_REJECTS; elapsed=0.0072s"
+    }
+  ],
+  "validation_reject_reason_counts": {
+    "age outside permitted range [18, 100]": 1,
+    "loan_amount must be a positive finite number": 1,
+    "unknown customer_id: C_UNKNOWN": 1,
+    "duplicate application_id within batch": 1
+  }
+}

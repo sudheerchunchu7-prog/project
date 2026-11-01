@@ -1,0 +1,80 @@
+{
+  "run_id": "RUN_5A804E53CEFC",
+  "source_file": "anomaly.csv",
+  "status": "SUCCESS",
+  "input_count": 1000,
+  "valid_count": 1000,
+  "rejected_count": 0,
+  "output_count": 1000,
+  "alerts": [
+    {
+      "alert_type": "null_rate_change",
+      "column_name": "age",
+      "severity": "high",
+      "baseline_value": "0.0%",
+      "current_value": "25.0%",
+      "explanation": "age null rate increased from 0.0% to 25.0% (+25.0%); 250 of 1000 rows are null."
+    },
+    {
+      "alert_type": "distribution_change",
+      "column_name": "status",
+      "severity": "warning",
+      "baseline_value": "{\"approved\": 0.661, \"pending\": 0.092, \"rejected\": 0.247}",
+      "current_value": "{\"approved\": 0.429, \"pending\": 0.067, \"rejected\": 0.504}",
+      "explanation": "status distribution changed; largest bucket changes: rejected: 24.7% -> 50.4%; approved: 66.1% -> 42.9%; pending: 9.2% -> 6.7%."
+    }
+  ],
+  "unexpected_columns": [],
+  "baseline_established": false,
+  "freshness_checked_at": "2026-10-30T13:29:51.219941+00:00",
+  "duration_seconds": 0.0178,
+  "rows_per_second": 56179.78,
+  "stage_results": [
+    {
+      "stage": "01_INGESTION",
+      "status": "PASS",
+      "detail": "Read 1000 data rows from anomaly.csv"
+    },
+    {
+      "stage": "02_REFERENCE_LOAD",
+      "status": "PASS",
+      "detail": "Loaded 501 customer reference IDs"
+    },
+    {
+      "stage": "03_SCHEMA_VALIDATION",
+      "status": "PASS",
+      "detail": "Required columns present; unexpected columns=none"
+    },
+    {
+      "stage": "04_RECORD_VALIDATION",
+      "status": "PASS",
+      "detail": "checked=1000, accepted=1000, rejected=0, reject_reasons={}"
+    },
+    {
+      "stage": "05_TARGET_PUBLISH",
+      "status": "PASS",
+      "detail": "Inserted 1000 accepted rows; quarantined 0 rows"
+    },
+    {
+      "stage": "06_DATA_PROFILING",
+      "status": "PASS",
+      "detail": "Created profiles for 3 columns"
+    },
+    {
+      "stage": "07_BASELINE_AND_MONITORING",
+      "status": "WARNING",
+      "detail": "Baseline compared; generated 2 alerts"
+    },
+    {
+      "stage": "08_RECONCILIATION",
+      "status": "PASS",
+      "detail": "input=1000 = accepted=1000 + rejected=0; target_output=1000"
+    },
+    {
+      "stage": "09_REPORTING",
+      "status": "PASS",
+      "detail": "Run status=SUCCESS; elapsed=0.0178s"
+    }
+  ],
+  "validation_reject_reason_counts": {}
+}

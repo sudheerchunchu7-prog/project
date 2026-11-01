@@ -1,0 +1,41 @@
+{
+  "source_file": "edge_cases.csv",
+  "seed": 45,
+  "injected_cases": [
+    {
+      "row_number": 2,
+      "case": "age_lower_boundary",
+      "expected": "valid"
+    },
+    {
+      "row_number": 3,
+      "case": "age_upper_boundary",
+      "expected": "valid"
+    },
+    {
+      "row_number": 4,
+      "case": "age_out_of_range",
+      "expected": "rejected"
+    },
+    {
+      "row_number": 5,
+      "case": "negative_loan_amount",
+      "expected": "rejected"
+    },
+    {
+      "row_number": 6,
+      "case": "missing_age",
+      "expected": "valid_and_profiled_as_null"
+    },
+    {
+      "row_number": 7,
+      "case": "unknown_customer_reference",
+      "expected": "rejected"
+    },
+    {
+      "row_number": 8,
+      "case": "duplicate_application_id",
+      "expected": "rejected"
+    }
+  ]
+}

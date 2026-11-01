@@ -1,0 +1,13 @@
+{
+  "run_id": "RUN_0A3BA6E4293D",
+  "source_file": "batch_001.csv",
+  "status": "SUCCESS",
+  "input_count": 100,
+  "valid_count": 100,
+  "rejected_count": 0,
+  "output_count": 100,
+  "alerts": [],
+  "unexpected_columns": [],
+  "baseline_established": true,
+  "freshness_checked_at": "2026-10-30T10:45:58.609746+00:00"
+}

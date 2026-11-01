@@ -1,0 +1,22 @@
+{
+  "run_id": "RUN_BE6CCA7CB9DB",
+  "source_file": "batch_002_anomaly.csv",
+  "status": "SUCCESS",
+  "input_count": 100,
+  "valid_count": 100,
+  "rejected_count": 0,
+  "output_count": 100,
+  "alerts": [
+    {
+      "alert_type": "null_rate_change",
+      "column_name": "age",
+      "severity": "high",
+      "baseline_value": "0.0%",
+      "current_value": "25.0%",
+      "explanation": "age null rate increased from 0.0% to 25.0% (+25.0%); 25 of 100 rows are null."
+    }
+  ],
+  "unexpected_columns": [],
+  "baseline_established": false,
+  "freshness_checked_at": "2026-10-30T10:45:58.640719+00:00"
+}
