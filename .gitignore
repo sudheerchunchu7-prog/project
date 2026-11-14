@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Spark
+spark-warehouse/
+metastore_db/
+derby.log/
+
+# Logs
+*.log
+logs/
+
+# Generated databases
+database/*.db
+database/*.sqlite
+database/*.sqlite3
+
+# Generated data
+data/generated/
+
+# Temporary outputs
+output/

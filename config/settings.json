@@ -1,0 +1,11 @@
+{
+  "max_loan_amount": 5000000,
+  "small_loan_threshold": 100000,
+  "medium_loan_max": 300000,
+  "spark_app_name": "LendingDataPipeline",
+  "spark_master": "local[2]",
+  "spark_shuffle_partitions": 4,
+  "sqlite_batch_size": 500,
+  "transformation_version": "1.0.0",
+  "database_path": "database/lending_pipeline.db"
+}

@@ -1,0 +1,9 @@
+from __future__ import annotations
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+
+def load_settings() -> dict:
+    with (ROOT / "config" / "settings.json").open(encoding="utf-8") as f:
+        return json.load(f)

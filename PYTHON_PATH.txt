@@ -1,0 +1,1 @@
+Run commands from the repository root with the selected virtual environment interpreter. The `src` directory is imported as a namespace package from the repository root.
